@@ -14,6 +14,7 @@
 <body>
 
 <!-- NAVBAR -->
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
         <a class="navbar-brand" href="index.html">AfriTalent</a>
@@ -29,12 +30,22 @@
                 <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
                 <li class="nav-item"><a class="nav-link active" href="freelances.html">Freelances</a></li>
                 <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">A propos</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
         </div>
     </div>
 </nav>
+<button id="darkModeToggle">🌙</button>
+
+<button id="topBtn">↑</button>
+
+<span class="counter" data-target="2500">0</span>
+
+<form id="contactForm">
+</form>
+
+<span id="year"></span>
 
 <section class="container mt-5 pt-5 text-center">
     <h1>Découvrez les meilleurs talents d'Afrique</h1>
@@ -42,7 +53,28 @@
         Développeurs, designers, spécialistes marketing et experts data prêts à réaliser vos projets.
     </p>
 </section>
+<!-- FILTRES -->
+<section class="container py-4">
+    <div class="text-center">
 
+        <button class="btn btn-primary filter-btn" data-filter="all">Tous</button>
+
+        <button class="btn btn-outline-primary filter-btn" data-filter="web">
+            Développement Web
+        </button>
+
+        <button class="btn btn-outline-primary filter-btn" data-filter="design">
+            UI/UX Design
+        </button>
+
+        <button class="btn btn-outline-primary filter-btn" data-filter="marketing">
+            Marketing Digital
+        </button>
+
+    </div>
+</section>
+
+<!-- FREELANCES -->
 
 <section class="container pb-5">
     <div class="row g-4">
@@ -147,9 +179,9 @@
 
         <div class="col-md-6 col-lg-4 freelancer-card" data-category="design">
             <div class="card h-100">
-                <img src="image/portrait-technicien-souriant-dans-systeme-surveillance-performances-du-centre-donnees_482257-125692.avif" class="card-img-top" alt="UX">
+                <img src=image/portrait-homme-sourire-programmeur-ordinateur-dans-bureau-nuit-visage-informatique-codeur-masculin-personne-programmant-codage-ecriture-pour-developpement-logicie.avif class="card-img-top" alt="UX">
                 <div class="card-body">
-                    <h5>Rokhaya Ndiaye</h5>
+                    <h5>Bachir</h5>
                     <p class="text-primary">UX Researcher</p>
                     <p>Études utilisateurs et optimisation UX.</p>
                     <p><strong>19 000 FCFA/h</strong></p>
