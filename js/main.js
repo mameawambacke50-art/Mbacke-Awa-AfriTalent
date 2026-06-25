@@ -53,9 +53,57 @@ if (topBtn) {
     });
 }
 
+// COMPTEURS ANIMÉS
 
+const counters = document.querySelectorAll(".counter");
 
+const startCounter = (counter) => {
+    const target = +counter.getAttribute("data-target");
+    let count = 0;
 
+    const updateCounter = () => {
+        const increment = target / 100;
+
+        if (count < target) {
+            count += increment;
+            counter.innerText = Math.ceil(count);
+            setTimeout(updateCounter, 20);
+        } else {
+            counter.innerText = target;
+        }
+    };
+
+    updateCounter();
+};
+
+const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            startCounter(entry.target);
+            counterObserver.unobserve(entry.target);
+        }
+    });
+});
+
+counters.forEach(counter => {
+    counterObserver.observe(counter);
+});
+
+// ANIMATIONS FADE-IN
+
+const fadeElements = document.querySelectorAll(".fade-in");
+
+const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+fadeElements.forEach(element => {
+    fadeObserver.observe(element);
+});
 
 // FILTRAGE DES FREELANCES
 

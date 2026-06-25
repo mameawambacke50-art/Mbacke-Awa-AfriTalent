@@ -178,7 +178,7 @@ section{
 }
 
 .freelance-card:hover{
-    transform:translateY(-10px);
+    transform:translateY(3px);
 }
 
 .freelance-card img{
