@@ -1,6 +1,5 @@
-// ===============================
+
 // DARK MODE
-// ===============================
 
 const darkModeBtn = document.getElementById("darkModeToggle");
 
@@ -20,7 +19,7 @@ if (darkModeBtn) {
     });
 }
 
-    // NAVBAR
+// NAVBAR
 
 const navbar = document.querySelector(".navbar");
 
